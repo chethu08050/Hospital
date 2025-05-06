@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-image:url(health1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #f9faf98f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h2 id="userTypeHeading"></h2>
+        <button onclick="goToLogin()">Login</button>
+        <button onclick="goToRegister()">Register</button>
+    </div>
+
+    <script>
+        // Retrieve the user type stored in localStorage
+        const userType = localStorage.getItem('userType');
+
+        // Set the heading based on user type
+        const heading = document.getElementById('userTypeHeading');
+        heading.innerText = userType.charAt(0).toUpperCase() + userType.slice(1) + " Portal";
+
+        function goToLogin() {
+            if (userType === 'doctor') {
+                window.location.href = 'login page.html'; // Doctor login page
+            } else if (userType === 'patient') {
+                //window.location.href = 'login2.html'; // Patient login page
+            }
+        }
+
+        function goToRegister() {
+            if (userType === 'doctor') {
+                window.location.href = 'doctor registration.html'; // Doctor registration page
+            } else if (userType === 'patient') {
+                window.location.href = 'patientregistration.html'; // Patient registration page
+            }
+        }
+    </script>
+</body>
+</html>

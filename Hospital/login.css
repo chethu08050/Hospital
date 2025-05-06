@@ -1,0 +1,63 @@
+body {
+    font-family: Arial, sans-serif;
+    background-image: url(health1.jpg);
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: 100% 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.container {
+    background-color: rgb(255, 255, 255);
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 2px 10px rgba(143, 95, 95, 0.1);
+    width: 300px;
+    text-align: center;
+}
+
+.login-section {
+    display: flex;
+    justify-content: space-between;
+}
+
+.doctor-login, .patient-login {
+    width: 45%;
+}
+
+input {
+    width: 90%;
+    padding: 8px;
+    margin: 10px 0;
+    border: 1px solid #0ac12c52;
+    border-radius: 5px;
+}
+
+button {
+    padding: 10px 20px;
+    background-color: #0a70ffcb;
+    color: rgb(128, 100, 100);
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #dddddd;
+}
+
+.register-links {
+    margin-top: 20px;
+}
+
+.register-links a {
+    text-decoration: none;
+    color: #007BFF;
+}
+
+.register-links a:hover {
+    text-decoration: underline;
+}

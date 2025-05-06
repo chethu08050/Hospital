@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="login.css">
+    
+    <style>
+        body {
+           
+            font-family: Arial, sans-serif;
+            background-image:url(health1.jpg);
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-size: 100% 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+        }
+        .container {
+            background-color: #f9faf98f;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            text-align: center;
+        }
+        h2 {
+            margin-bottom: 20px;
+        }
+        button {
+            padding: 15px;
+            background-color: #007BFF;
+            color: rgb(0, 0, 0);
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            margin: 10px;
+            width: 150px;
+        }
+        button:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+
+    <div class="container">
+    <h2>Welcome! Select User Type</h2>
+        </li><a href="doctor registration.html"> <button onclick="selectUserType('doctor ')">Doctor</button></a>
+        </li><a href="patientregistration.html"> <button onclick="selectUserType('patient')">Patient</button>
+    </div>
+    <script>
+        function selectUserType(userType) {
+            localStorage.setItem('userType', userType);
+
+            window.location.href = 'loginpage.html'; 
+        }
+    </script>
+</body>
+</html>

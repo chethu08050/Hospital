@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Doctor Registration</title>
+    <link rel="stylesheet" href="login.css">
+</head>
+<body>
+    <div class="container">
+        <h2>Doctor Registration</h2>
+        <form id="doctorRegistrationForm" action="register_doctor.php" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="specialization">Specialization:</label>
+            <input type="text" id="specialization" name="specialization" required>
+
+            <label for="license">License Number:</label>
+            <input type="text" id="license" name="license" required>
+
+            <label for="password">Password:</label>
+            <input type="password" id="password" name="password" required>
+
+            <button type="submit">Register</button>
+        </form>
+
+        <!-- JavaScript to redirect back to login page after successful registration -->
+        <script>
+            document.getElementById('doctorRegistrationForm').addEventListener('submit', function(event) {
+                event.preventDefault();  // Prevent default form submission behavior
+                // Simulate successful registration
+                alert("Registration successful!");
+                // Redirect back to login page
+                window.location.href = 'login1.html';
+            });
+        </script>
+
+        <!-- Link back to login page -->
+        <div class="back-to-login">
+            <p>Are you a patient? <a href="patientregistration.html">Register as patient</a></p>
+            <p>Already have an account? <a href="login page.html">Login here</a></p>
+        </div>
+    </div>
+</body>
+</html>
